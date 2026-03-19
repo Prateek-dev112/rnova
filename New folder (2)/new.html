@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Creative Contact Page</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* COLORS */
+:root{
+    --navy:#0a192f;
+    --navy-light:#112240;
+    --accent:#64ffda;
+    --glass:rgba(255,255,255,0.05);
+}
+
+/* BODY */
+body{
+    background: linear-gradient(135deg,#0a192f,#112240,#020c1b);
+    color:white;
+}
+
+/* NAVBAR */
+header{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 60px;
+    background:rgba(10,25,47,0.7);
+    backdrop-filter: blur(10px);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:var(--accent);
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:white;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    width:0%;
+    height:2px;
+    background:var(--accent);
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero span{
+    color:var(--accent);
+}
+
+.hero p{
+    margin:15px 0;
+    color:#8892b0;
+}
+
+/* BUTTONS */
+.buttons button{
+    margin:15px;
+    padding:12px 30px;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.primary{
+    background:var(--accent);
+    color:#000;
+    box-shadow:0 0 15px var(--accent);
+}
+
+.primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px var(--accent);
+}
+
+.secondary{
+    background:transparent;
+    border:1px solid var(--accent);
+    color:var(--accent);
+}
+
+.secondary:hover{
+    background:var(--accent);
+    color:black;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:50px;
+}
+
+.card{
+    background:var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius:15px;
+    padding:30px;
+    width:250px;
+    text-align:center;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover{
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:0 0 20px rgba(100,255,218,0.3);
+}
+
+/* FLOATING ANIMATION */
+.card{
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+/* FORM */
+.form-section{
+    text-align:center;
+    padding:80px 20px;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+/* INPUT STYLE */
+input,select,textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    background:rgba(255,255,255,0.05);
+    color:white;
+    transition:0.3s;
+}
+
+input:focus,textarea:focus,select:focus{
+    border:1px solid var(--accent);
+    box-shadow:0 0 10px var(--accent);
+}
+
+/* ROW */
+.row{
+    display:flex;
+    gap:10px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(0,0,0,0.5);
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="logo">RYNOVA</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Get in Touch <span>with Us</span></h1>
+    <p>We create powerful digital experiences that grow your business.</p>
+
+    <div class="buttons">
+        <button class="primary">Send Message</button>
+        <button class="secondary">Call Now</button>
+    </div>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3>📞 Phone</h3>
+        <p>+91-9810724531</p>
+        <p>+91-7895622891</p>
+    </div>
+
+    <div class="card">
+        <h3>📧 Email</h3>
+        <p>contact@company.com</p>
+    </div>
+
+    <div class="card">
+        <h3>📍 Address</h3>
+        <p>Noida, India</p>
+    </div>
+</section>
+
+<section class="form-section">
+    <h2>Send Us a Message</h2>
+
+    <form>
+        <div class="row">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+        </div>
+
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number">
+
+        <select>
+            <option>Select Service</option>
+            <option>Web Development</option>
+            <option>App Development</option>
+        </select>
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button class="primary">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <h3>RYNOVA</h3>
+    <p>Building modern digital solutions 🚀</p>
+</footer>
+
+</body>
+</html>

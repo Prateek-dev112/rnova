@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Color Palette */
+:root {
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --accent: #64ffda;
+    --white: #e6f1ff;
+    --gray: #8892b0;
+}
+
+/* Navbar */
+header {
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    margin-left: 20px;
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--light-navy);
+    color: var(--white);
+}
+
+.hero span {
+    color: var(--accent);
+}
+
+.buttons button {
+    margin: 15px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Buttons */
+.primary {
+    background: var(--accent);
+    color: var(--navy);
+}
+
+.primary:hover {
+    transform: scale(1.05);
+}
+
+.secondary {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.secondary:hover {
+    background: var(--accent);
+    color: var(--navy);
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    background: #f5f5f5;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Form */
+.form-section {
+    padding: 60px;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Footer */
+footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
